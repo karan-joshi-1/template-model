@@ -229,7 +229,7 @@ class Trainer:
             branchName = str(self.training_params.get("gitParams").get("branchName"))
             dateTimeString = str(datetime.datetime.now().strftime("%m_%d_%y-%H_%M"))
             self.run_name = branchName + "-" + dateTimeString
-            mlflow.set_tracking_uri("http://10.220.115.62:5000/")
+            mlflow.set_tracking_uri("http://10.220.120.17:5000/")
             mlflow.start_run(run_name=self.run_name)
             mlflow.log_params(self.training_params)
 
